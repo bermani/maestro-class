@@ -287,7 +287,8 @@ class Evaluator:
             final_pred = np.argmax(output[0])
             # final_pred = output.max(1, keepdim=True)[1]
             # print(output, final_pred)
-            if final_pred.item() != labels.item():
+            #if final_pred.item() != labels.item():
+            if final_pred.item() == target_label:
                 n_success_attack += 1
 
             # Calculate final accuracy for this epsilon
